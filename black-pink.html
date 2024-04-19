@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑皮居酒屋</title>
+    <link rel="stylesheet" href="black-pink.css">
+    <style></style>
+</head>
+<body>
+    <header>
+        <h1>黑皮居酒屋</h1>
+    </header>
+
+    <aside>
+        <nav>
+            <button onclick="showContent('about')">關於我們</button>
+            <button onclick="showContent('menu')">菜單</button>
+            <button onclick="showContent('reservation')">預約訂位</button>
+            <button onclick="showContent('contact')">聯繫我們</button>
+        </nav>
+    </aside>
+
+    <main id="main-content">
+        <section id="about" class="hidden">
+            <h2>關於我們</h2>
+            <p>黑皮居酒屋成立於2015年，位於高雄市的巷弄中。我們以新鮮食材為基礎，提供獨特的日式居酒屋美食，讓客人感受到舌尖上的樂趣。</p>
+        </section>
+
+        <section id="menu" class="hidden">
+        <div class="menu-category" id="appetizers">
+            <h2 onclick="toggleMenu('appetizers')">前菜        ˇ</h2>
+            <div class="menu-items hidden">
+                <div class="menu-items" onclick="toggleSubMenu('appetizers-sub')">
+                    <img src="onion.jpg" alt="涼拌洋蔥">
+                    <h3>涼拌洋蔥</h3>
+                </div>
+                <div class="menu-items" onclick="toggleSubMenu('appetizers-sub')">
+                    <img src="lawsu.jpg" alt="和風時蔬">
+                    <h3>和風時蔬</h3>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-category" id="grilled">
+            <h2 onclick="toggleMenu('grilled')">烤物        ˇ</h2>
+            <div class="menu-items hidden">
+                <!-- 烤物菜品 -->
+                
+            </div>
+
+            <div class="sub-menu hidden" id="appetizers-sub"></div>            
+        </div>
+        
+        <!-- 其他菜单类别 -->
+        </section>
+
+        <section id="reservation" class="hidden">
+            <h2>預約訂位</h2>
+            <p>若臨時更動時間或人數，還請提前告知，謝謝您的配合!</p>
+            <div class="container">
+                <form id="reservation-form">
+                    <label for="name">姓氏：</label>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="gender">性別：</label>
+                    <input type="checkbox" id="male" name="gender" value="male">
+                    <label for="male">先生</label>
+                    <input type="checkbox" id="female" name="gender" value="female">
+                    <label for="female">女士</label><br>
+                    <label for="date">日期：</label>
+                    <input type="date" id="date" name="date" required><br>
+                    <label for="time">時間：</label>
+                    <input type="time" id="time" name="time" required><br>
+                    <label for="guests">人數：</label>
+                    <input type="number" id="guests" name="guests" required><br>
+                    <button type="submit">預約</button>
+                </form>
+                <div id="message"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="hidden">
+            <h2>聯繫我們</h2>
+            <p>地址：高雄市XXX區YYY街ZZZ號</p>
+            <p>電話：(02) 1234-5678</p>
+            <p>電子郵件：info@heiping-izakaya.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2015 黑皮居酒屋</p>
+    </footer>
+
+    <script src="black-pink.js"></script>
+    <img class="background-image" src="black-pin.jpg" alt="背景图片">
+</body>
+</html>
