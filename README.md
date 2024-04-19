@@ -1,1 +1,3 @@
-hello
+---
+permalink:/black-pink.html
+---
