@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0add4; /* 米色 */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color:#e2e2b7;
+  padding: 20px 0;
+  position: relative;
+}
+
+h1 {
+  font-size: 36px;
+  color: #37a4f3;
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+h3 {
+  text-align: center; /* 文字置中 */
+  margin-top: 30%; /* 與 banner 留出一些間距 */
+}
+
+
+.hamburger-icon {
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #dcd0d090;
+  z-index: 999;
+}
+
+nav ul {
+  list-style: none;
+  padding: 20px;
+}
+
+nav ul li {
+  margin-bottom: 10px;
+}
+
+nav ul li a {
+  color: #010101;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+h6{
+  position: fixed;
+  bottom:0
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+#bottom-bar {
+  background-color: #e2e2b7;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#bottom-bar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+#bottom-bar img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+.banner {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: auto;
+  height: 20vh; /* 橫幅高度為頁面高度的五分之一 */
+  width: 100vh;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.banner-content {
+  display: flex;
+  justify-content: center; 
+  transition: transform 0.5s ease;
+}
+
+
+.banner-content img {
+  flex: 0 0 auto;
+  width: auto; /* 圖片寬度為橫幅寬度的 100% */
+  height: 20vh;
+  margin-right: 0%;
+  
+}
+.banner::-webkit-scrollbar {
+   display: none; /*隱藏滾動條 */
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 每橫行三個等分 */
+  gap: 20px; /* 每個產品之間的間距 */
+}
+
+.product {
+  text-align: center;
+  width: calc(33.33% - 20px); /* 一行三個，間距為20px */
+  margin-right: 20px; /* 調整產品間距 */
+  margin-bottom: 20px; /* 調整產品行間距 */
+}
+
+.product img {
+  width: 100%; /* 讓圖片填滿父容器 */
+}
+
+.product h4 {
+  text-align: center; /* 文字置中 */
+}
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product:last-child {
+  margin-right: 0; /* 最後一個產品沒有右邊間距 */
+}
+main img{
+  width: auto; /* 圖片寬度為橫幅寬度的 100% */
+  height: 20vh;
+}
